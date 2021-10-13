@@ -1,0 +1,37 @@
+version: '3.9'
+services:
+  gradle:
+    container_name: gradle
+    build:
+      dockerfile: ./Dockerfile
+    volumes:
+      - /home/runner/work/java-ui-test-framework/java-ui-test-framework/build/allure-results:/home/gradle/build/allure-results
+    networks:
+      - ui
+
+  selenoid:
+    container_name: selenoid
+    image: aerokube/selenoid:latest
+    ports:
+      - "4444:4444"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /home/runner/work/java-ui-test-framework/java-ui-test-framework/config:/etc/selenoid/:ro
+    command:
+      -service-startup-timeout 2m
+      -container-network ui
+    networks:
+      - ui
+
+  selenoid-ui:
+    container_name: selenoid-ui
+    image: aerokube/selenoid-ui:latest
+    command: --selenoid-uri http://selenoid:4444
+    ports:
+      - 8080:8080
+    networks:
+      - ui
+
+networks:
+  ui:
+    name: ui

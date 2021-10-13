@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Example Tests" parallel="tests" thread-count="4" configfailurepolicy="continue" verbose="10">
+    <method-selectors>
+        <method-selector>
+            <selector-class name="helpers.listeners.CustomMethodSelector"/>
+        </method-selector>
+    </method-selectors>
+    <test name="Chrome tests" parallel="methods" thread-count="3">
+        <parameter name="hub" value="selenoid"/>
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="browserSize" value="1000x768"/>
+        <parameter name="type" value="desktop"/>
+        <packages>
+            <package name="tests.*"/>
+        </packages>
+    </test>
+    <test name="Firefox tests" parallel="methods" thread-count="3">
+        <parameter name="hub" value="selenoid"/>
+        <parameter name="browserName" value="firefox"/>
+        <parameter name="browserSize" value="500x768"/>
+        <parameter name="type" value="desktop"/>
+        <packages>
+            <package name="tests.*"/>
+        </packages>
+    </test>
+    <!--    not run on Windows selenoid-->
+    <!--    <test name="Chrome mobile tests" parallel="methods" thread-count="3">-->
+    <!--        <parameter name="hub" value="selenoid"/>-->
+    <!--        <parameter name="browserName" value="chrome"/>-->
+    <!--        <parameter name="browserVersion" value="mobile-75.0"/>-->
+    <!--        <parameter name="skin" value="WXGA720"/>-->
+    <!--        <parameter name="type" value="mobile"/>-->
+    <!--        <packages>-->
+    <!--            <package name="tests.*"/>-->
+    <!--        </packages>-->
+    <!--    </test>-->
+    <!--    <test name="Browserstack Mobile tests" parallel="methods" thread-count="5">-->
+    <!--        <parameter name="hub" value="browserstack"/>-->
+    <!--        <parameter name="device" value="iPhone11"/>-->
+    <!--        <parameter name="type" value="mobile"/>-->
+    <!--        <parameter name="driver" value="IOSDriver"></parameter>-->
+    <!--        <packages>-->
+    <!--            <package name="tests.*"/>-->
+    <!--        </packages>-->
+    <!--    </test>-->
+</suite>
