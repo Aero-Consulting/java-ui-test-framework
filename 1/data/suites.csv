@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Aug 31 08:19:22 GMT 2022","Wed Aug 31 08:19:22 GMT 2022","137","Example Tests","Chrome tests","tests.GoogleDoodlesTest","tests.GoogleDoodlesTest","googleDoodle","Дудл Google",""
+"passed","Wed Aug 31 08:19:26 GMT 2022","Wed Aug 31 08:19:26 GMT 2022","88","Example Tests","Firefox tests","tests.GoogleDoodlesTest","tests.GoogleDoodlesTest","googleDoodle","Дудл Google",""
+"passed","Wed Aug 31 08:19:21 GMT 2022","Wed Aug 31 08:19:24 GMT 2022","3000","Example Tests","Chrome tests","tests.GoogleTest","tests.GoogleTest","googleSearch","Поиск на главной страницы Google",""
+"passed","Wed Aug 31 08:19:25 GMT 2022","Wed Aug 31 08:19:27 GMT 2022","2388","Example Tests","Firefox tests","tests.GoogleTest","tests.GoogleTest","googleSearch","Поиск на главной страницы Google",""
