@@ -37,7 +37,7 @@ dependencies {
     testImplementation "io.qameta.allure:allure-java-commons:$allureVersion"
     testImplementation "io.qameta.allure:allure-testng:$allureVersion"
     testImplementation "org.testng:testng:$testngVersion"
-    testImplementation 'org.aspectj:aspectjweaver:1.8.10'
+    testImplementation 'org.aspectj:aspectjweaver:1.9.9.1'
     testImplementation 'io.appium:java-client:7.6.0'
     testImplementation "org.apache.logging.log4j:log4j-slf4j-impl:$logVersion"
     testImplementation 'org.apache.commons:commons-lang3:3.12.0'
