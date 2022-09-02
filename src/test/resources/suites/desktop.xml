@@ -9,6 +9,7 @@
     <test name="Chrome tests" parallel="methods" thread-count="3">
         <parameter name="hub" value="local"/>
         <parameter name="browserName" value="chrome"/>
+        <parameter name="browserVersion" value="104.0"/>
         <parameter name="browserSize" value="1000x768"/>
         <parameter name="type" value="desktop"/>
         <packages>
@@ -18,6 +19,7 @@
     <test name="Firefox tests" parallel="methods" thread-count="3">
         <parameter name="hub" value="selenoid"/>
         <parameter name="browserName" value="firefox"/>
+        <parameter name="browserVersion" value="104.0"/>
         <parameter name="browserSize" value="500x768"/>
         <parameter name="type" value="desktop"/>
         <packages>
