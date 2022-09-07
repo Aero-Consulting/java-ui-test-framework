@@ -1,4 +1,4 @@
-FROM gradle:7.5.0-jdk11
+FROM gradle:7.5.0-jdk18
 
 ENV WORK_DIR=/home/gradle
 
